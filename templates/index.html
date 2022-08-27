@@ -1,2 +1,95 @@
-{% extends "layout.html" %}
-{% block title %}Index{% endblock %}
+{% extends "layout.html" %} {% block title %}Index{% endblock %} {% block contains %}
+<div class="row">
+    <div class="col-lg-2">
+        <div id="myInfo" class="border border-dark mt-3">
+            <p class="text-center bg-dark text-white py-2">Informations</p>
+            <div class="text-center">
+                <img src="{{ url_for('static', filename = 'img/defaultboy.jpg') }}" alt="your pic" width="150" class="img-thumbnail my-3" height="150">
+                <p class="text-uppercase bg-primary text-white"><i class="fas fa-solid fa-circle text-success"></i> Mario Randriamanantena</p>
+                <p class="small">N° : EMPL00478 | <i class="fa-solid fa-phone text-danger"></i> : 0340731748</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-10">
+        <div id="myData" class="m-2">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#conge">Congés</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#presence">Présence</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#salaire">Salaire</a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content border border-top-0">
+                <div class="tab-pane container active" id="conge">
+                    <div class="pt-3 mt-3">
+                        <a href="#" class="btn btn-info btn-sm"><i class="fa-solid fa-plus"></i> Demande de congé <i class="fa-solid fa-file-lines"></i></a>
+                    </div>
+                    <div class="mt-4">
+                        <p class="bg-primary text-white p-3">Congé 2022</p>
+
+                        <table class="table table-bordered table-hover mt-n2">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Num</th>
+                                    <th>Nom de catégorie</th>
+                                    <th>Paiement</th>
+                                    <th>Date de début</th>
+                                    <th>Date de retour</th>
+                                    <th>Journées</th>
+                                    <th>Statut</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2</td>
+                                    <td>LEAV10055 <span class="badge badge-danger">Nouveau</span></td>
+                                    <td>vacance</td>
+                                    <td><span class="badge badge-warning">Non payé</span></td>
+                                    <td>2022-04-01</td>
+                                    <td>2022-15-01</td>
+                                    <td>19</td>
+                                    <td><span class="badge badge-warning">En attente</span></td>
+                                    <td><a href="#" class="btn btn-primary btn-sm"><i class="fa-solid fa-eye"></i></a></td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>LEAV10265 <span class="badge badge-danger">Nouveau</span></td>
+                                    <td>maladie</td>
+                                    <td><span class="badge badge-success">Payé</span></td>
+                                    <td>2022-24-03</td>
+                                    <td>2022-05-04</td>
+                                    <td>7</td>
+                                    <td><span class="badge badge-success">Accéptable</span></td>
+                                    <td><a href="#" class="btn btn-primary btn-sm"><i class="fa-solid fa-eye"></i></a></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>LEAV11155 <span class="badge badge-danger">Nouveau</span></td>
+                                    <td>congés payés</td>
+                                    <td><span class="badge badge-success">Payé</span></td>
+                                    <td>2022-01-11</td>
+                                    <td>2022-15-11</td>
+                                    <td>15</td>
+                                    <td><span class="badge badge-success">Accéptable</span></td>
+                                    <td><a href="#" class="btn btn-primary btn-sm"><i class="fa-solid fa-eye"></i></a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane container fade" id="presence">Mada</div>
+                <div class="tab-pane container fade" id="salaire">faka</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

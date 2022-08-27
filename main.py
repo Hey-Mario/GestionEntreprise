@@ -1,8 +1,7 @@
 from flask import *
-from flask_bootstrap import *
+from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
-Bootstrap(app)
 
 
 @app.route("/")

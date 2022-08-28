@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
-    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/bootstrap.min.css') }}">
-    <!-- <link rel="stylesheet" href="{{ url_for('static', filename = 'css/all.min.css') }}"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/bootstrap.min.css') }}"> {% block linkHead %}{% endblock %}
     <title>{% block title %}Page{% endblock %} - MYC</title>
 </head>
 
@@ -16,7 +15,7 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
               </button>
-            <a href="#"><img src="{{ url_for('static', filename = 'img/logo.png') }}" class="navbar-brand" alt="logo" width="50" height="56"></a>
+            <a href="#"><img src="{{ url_for('static', filename = 'img/logo.png') }}" class="navbar-brand rounded" alt="logo" width="50" height="56"></a>
             <a class="navbar-brand" href="#">Navbar</a>
 
             <div class="collapse navbar-collapse" id="collapsibleNavbar">

@@ -16,6 +16,7 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
               </button>
+            <a href="#"><img src="{{ url_for('static', filename = 'img/logo.png') }}" class="navbar-brand" alt="logo" width="50" height="56"></a>
             <a class="navbar-brand" href="#">Navbar</a>
 
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
@@ -40,8 +41,9 @@
     </div>
 
     <script src="{{ url_for('static', filename = 'js/jquery.min.js') }}"></script>
-    <script src="{{ url_for('static', filename = 'js/popper.min.js') }}}}"></script>
+    <script src="{{ url_for('static', filename = 'js/popper.min.js') }}"></script>
     <script src="{{ url_for('static', filename = 'js/bootstrap.min.js') }}"></script>
+    {% block script %}{% endblock %}
 </body>
 
 </html>
